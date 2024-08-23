@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <div id="loginPage">
+        <header
+          class="d-flex fixed-top my-header my-1 align-items-center justify-content-around"
+        >
+          <a href="#" class="login__title rubik-glitch-regular py-2 fs-2">
+            <img
+              src="./professional-car-rental-logo.png"
+              height="70"
+              alt="car-logo"
+            />
+            The Wheel Deal
+          </a>
+          <a href="#" class="login_subtitle grandiflora-one-regular fs-4">
+            Car Rental Aplication
+          </a>
+        </header>
+        <div
+          class="container d-flex justify-content-end align-items-center h-100"
+        >
+          <!-- Login / Register Card -->
+          <div class="my-login__card">
+            <h3 class="grandiflora-one-regular">Find Your Perfect Ride</h3>
+            <p class="text-light">
+              Search for available cars based on your location, preferred dates,
+              and preferences. Whether you need a compact car for city driving
+              or an SUV for a road trip, we’ve got you covered.
+            </p>
+            <div class="btn-div float-end my-5">
+              <!-- Register Button -->
+              <button
+                class="btn btn-costum-made-2 fs-4 me-2"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+              >
+                Register
+              </button>
+              <!-- Login Modal -->
+              <button
+                class="btn btn-costum-made fs-4 me-2"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Login
+              </button>
+            </div>
+          </div>
+
+          <!-- Register Modal -->
+          <div class="modal fade" id="registerModal" data-bs-backdrop="static">
+            <div class="modal-dialog">
+              <div class="modal-content" id="registrationModalBody">
+                <div class="modal-header">
+                  <h3 class="form-title">Register</h3>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form class="grandiflora-one-regular" id="registrationForm">
+                    <div class="mb-3">
+                      <label for="firstName" class="form-label">
+                        First Name:
+                      </label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        class="form-control input-style"
+                      />
+                      <p id="firstNameMessage"></p>
+                    </div>
+                    <div class="mb-3">
+                      <label for="lastName" class="form-label">
+                        Last Name:
+                      </label>
+                      <input type="text" class="form-control" id="lastName" />
+                      <p id="lastNameMessage"></p>
+                    </div>
+                    <div class="mb-3">
+                      <label for="phoneNum" class="form-label">
+                        Phone Number:
+                      </label>
+                      <input type="text" class="form-control" id="phoneNum" />
+                      <p id="phoneNumMessage"></p>
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label"> Email: </label>
+                      <input type="text" class="form-control" id="email" />
+                      <p id="emailMessage"></p>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">
+                        Password:
+                      </label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                      />
+                      <p id="passwordMessage"></p>
+                    </div>
+                    <button
+                      type="button"
+                      class="float-end ms-2 btn submit-btn"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button
+                      class="float-end close-btn btn"
+                      onclick="registerForm(event)"
+                    >
+                      Submit
+                    </button>
+                    <p id="succesMessage"></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Login Modal -->
+          <div
+            class="modal fade"
+            id="loginModal"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content" id="loginModalBody">
+                <div class="modal-header">
+                  <h3>Login</h3>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="emailLogin" class="form-label"> Email: </label>
+                    <input type="text" class="form-control" id="emailLogin" />
+                    <p id="emailLoginMessage"></p>
+                  </div>
+                  <div class="mb-3">
+                    <label for="passwordLogin" class="form-label">
+                      Password:
+                    </label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="passwordLogin"
+                    />
+                    <p id="passwordLoginMessage"></p>
+                  </div>
+                  <button
+                    type="button"
+                    class="float-end ms-3 btn login-close-btn"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    class="float-end btn s login-sumbit-btn"
+                    onclick="loginForm(event)"
+                  >
+                    Submit
+                  </button>
+                  <p id="loginSuccesMessage"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="carsPage" class="mb-5">
+        <header class="my-header mt-1 mb-5">
+          <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+              <a
+                class="navbar-brand text-info fs-3 ms-3"
+                href="#"
+                id="headerTitle"
+              >
+                <span id="title" class="rubik-glitch-regular"></span>
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarID"
+                aria-controls="navbarID"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarID">
+                <div
+                  class="navbar-nav tenor-sans-regular align-items-center m-auto"
+                >
+                  <a class="nav-link" id="idSort" href="#"> By ID </a>
+                  <a class="nav-link" id="priceSort" href="#"> By Price </a>
+                  <a class="nav-link" id="yearSort" href="#"> By Year </a>
+
+                  <a class="nav-link" href="#">
+                    <select class="" id="colorSelect">
+                      <option value="">Select color</option>
+                      <option value="Red">Red</option>
+                      <option value="Yellow">Yellow</option>
+                      <option value="Blue">Blue</option>
+                      <option value="Green">Green</option>
+                      <option value="Purple">Purple</option>
+                      <option value="Orange">Orange</option>
+                      <option value="Black">Black</option>
+                      <option value="White">White</option>
+                      <option value="Silver">Silver</option>
+                      <option value="Gold">Gold</option>
+                    </select></a
+                  >
+                  <a class="nav-link" href="#">
+                    <select id="featuresSelect" class="">
+                      <option value="">Select feature</option>
+                      <option value="Twin-Turbo Inline-6">
+                        Twin-Turbo Inline-6
+                      </option>
+                      <option value="All-Wheel Drive">All-Wheel Drive</option>
+                      <option value="M Sport Differential">
+                        M Sport Differential
+                      </option>
+                      <option value="V10 Engine">V10 Engine</option>
+                      <option value="Quattro All-Wheel Drive">
+                        Quattro All-Wheel Drive
+                      </option>
+                      <option value="Carbon Fiber Exterior">
+                        Carbon Fiber Exterior
+                      </option>
+                      <option value="Twin-Turbo Flat-6">
+                        Twin-Turbo Flat-6
+                      </option>
+                      <option value="Rear-Wheel Drive">Rear-Wheel Drive</option>
+                      <option value="Sport Chrono Package">
+                        Sport Chrono Package
+                      </option>
+                      <option value="Supercharged V8">Supercharged V8</option>
+                      <option value="All-Wheel Drive">All-Wheel Drive</option>
+                      <option value="Convertible">Convertible</option>
+                      <option value="Twin-Turbo V12">Twin-Turbo V12</option>
+                      <option value="Rear-Wheel Drive">Rear-Wheel Drive</option>
+                      <option value="Luxury Interior">Luxury Interior</option>
+                      <option value="V12 Engine">V12 Engine</option>
+                      <option value="SkyActiv-G Engine">
+                        SkyActiv-G Engine
+                      </option>
+                      <option value="Turbocharged Boxer Engine">
+                        Turbocharged Boxer Engine
+                      </option>
+                      <option value="Sport-Tuned Suspension">
+                        Sport-Tuned Suspension
+                      </option>
+                      <option value="Turbocharged Inline-4">
+                        Turbocharged Inline-4
+                      </option>
+                      <option value="Front-Wheel Drive">
+                        Front-Wheel Drive
+                      </option>
+                      <option value="Sport Suspension">Sport Suspension</option>
+                    </select>
+                  </a>
+                </div>
+
+                <input type="text" placeholder="Search" id="myInput" />
+                <img
+                  src="./icon.svg"
+                  class="search-icon me-3"
+                  alt="search-icon"
+                />
+              </div>
+            </div>
+          </nav>
+        </header>
+        <div class="container">
+          <div class="row g-4" id="carsRow"></div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <script src="main.js"></script>
+</html>
