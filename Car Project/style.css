@@ -1,0 +1,270 @@
+@import url(fonts.css);
+
+body {
+  background: linear-gradient(45deg, #02131c, #0d3146);
+  overflow: auto !important;
+}
+
+#loginPage {
+  background-image: url(./ai-generated-8588657_1920l.png);
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: left bottom;
+  height: 100vh;
+}
+
+.login__title {
+  text-decoration: none;
+  color: #abf2ff;
+  letter-spacing: 7px;
+  animation: light 3s linear alternate-reverse infinite;
+}
+
+.login_subtitle {
+  text-decoration: none;
+  color: #abf2ff;
+  letter-spacing: 7px;
+}
+
+@keyframes light {
+  0% {
+    color: #abf2ff;
+  }
+  50% {
+    color: #02d9ff;
+  }
+  100% {
+    color: #abf2ff;
+  }
+}
+#carsPage {
+  flex-direction: column;
+  display: none;
+}
+
+.modal-backdrop {
+  overflow-y: scroll;
+}
+.my-header {
+  background: linear-gradient(180deg, #02131c, #0d3146);
+  border: 2px solid #abf2ff;
+  border-radius: 12px;
+  box-shadow: 1px 1px 20px #02d9ff, inset 1px 1px 10px #02d9ff;
+  color: #02d9ff;
+}
+
+.my-card {
+  background-color: transparent;
+  color: #5dfcfc;
+  border: 1.5px solid #00ffff;
+  box-shadow: 2px 2px 20px #02fff2, inset 2px 2px 20px #02d9ff;
+
+  &:hover {
+    background: linear-gradient(45deg, #00fffb, #0794bb, #77b4b8b7);
+    box-shadow: 2px 2px 20px #02d9ff, inset 3px 2px 7px #02d9ff;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.03);
+    color: #02131c;
+  }
+
+  & .card-header {
+    background-color: #082539cc !important;
+    box-shadow: 2px 2px 20px #02d9ff, inset 2px 2px 10px #02d9ff;
+    border: 1.2px solid #00ffee;
+  }
+
+  & .card-footer {
+    background-color: #081e2dcc !important;
+    box-shadow: 2px 2px 20px #02d9ff, inset 2px 2px 10px #02d9ff;
+    border: 1.2px solid #a2ecf9;
+  }
+}
+
+.nav-link {
+  color: #a2ecf9 !important;
+
+  &:hover {
+    text-shadow: 1px 1px 5px #02d9ff;
+    color: #a0d8f4;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+  }
+}
+
+select {
+  cursor: pointer;
+  background: #0d3146;
+
+  padding: 7px 10px;
+  color: #a2ecf9;
+  border: 1px solid #a2ecf9;
+  border-radius: 12px;
+
+  &:hover {
+    box-shadow: 2px 2px 10px #a2ecf9, inset 3px 2px 7px #a2ecf968;
+    transition: all 0.4s ease-in-out;
+  }
+}
+input {
+  background-color: #a0d8f4;
+  border: none;
+  border-radius: 12px;
+  padding: 5px 10px;
+}
+
+.search-icon {
+  padding-left: 10px;
+}
+
+.my-login__card {
+  background: linear-gradient(45deg, #0d31469e, #0d5277, #083948b0);
+  color: #ffff;
+  width: 50%;
+
+  border: 1.5px solid #02d9ff !important;
+  box-shadow: 1px 1px 10px #0e7ec0, inset 1px 1px 10px #0e7ec0;
+  padding: 20px;
+}
+
+.btn-costum-made {
+  color: #e8e0ff;
+  text-shadow: 1px 1px 4px #ffffff;
+  box-shadow: 1px 1px 10px #b56cff, inset 1px 1px 10px #d26fff;
+  border: 1px solid #ca8aff;
+  -webkit-box-reflect: below 2px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.543));
+
+  &:hover {
+    background-color: #975aff;
+  }
+}
+
+.btn-costum-made-2 {
+  color: #fbff09;
+  text-shadow: 1px 1px 7px #4ef80bb9;
+  box-shadow: 1px 1px 10px #ceff09, inset 1px 1px 10px #e8df35;
+  border: 1px solid #ffd900;
+  -webkit-box-reflect: below 4px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.011), rgba(166, 164, 21, 0.221));
+
+  &:hover {
+    background-color: #ffd900;
+    color: #02131c;
+  }
+}
+
+#registerModal {
+  background: linear-gradient(45deg, #0f0e00dc, #072b41e1);
+}
+
+#registrationModalBody {
+  background: #02131c3a;
+  color: #e2ff9f;
+  font-weight: bold;
+  border: 1px solid #00ffff;
+  box-shadow: 2px 2px 20px #02ffee, inset 2px 2px 10px #02ffd5;
+}
+
+.form-control-plaintext:focus,
+.form-control-plaintext:not(:placeholder-shown),
+.form-control:focus,
+.form-control:not(:placeholder-shown) {
+  background-color: transparent;
+  color: #fbff19;
+
+  &:hover {
+    box-shadow: 2px 2px 10px #02d9ff;
+  }
+}
+
+.form-title {
+  color: #02ffff;
+  letter-spacing: 7px;
+  font-family: "Black Ops One", system-ui;
+}
+
+.submit-btn {
+  border: 2px solid #02ffd5;
+  color: #00ffff;
+  box-shadow: 2px 2px 7px #02ffd58f, inset 2px 2px 7px #02ffee76;
+
+  &:hover {
+    background-color: #02ffd5;
+    color: #02131c;
+    font-weight: bold;
+    box-shadow: 2px 2px 7px #02ffd58f, inset 2px 2px 7px #02ffee76;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.03);
+  }
+}
+.close-btn {
+  background-color: #02ffd5;
+  color: #02131c;
+  font-weight: bold;
+  border: 2px solid #02ffd5;
+  box-shadow: 2px 2px 7px #02ffd58f, inset 2px 2px 7px #02ffee76;
+  &:hover {
+    border: 2px solid #02ffd5;
+    color: #00ffff;
+    box-shadow: 2px 2px 7px #02ffd58f, inset 2px 2px 7px #02ffee76;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.03);
+  }
+}
+
+#loginModal {
+  background: linear-gradient(45deg, #4a1968, #39789c52);
+}
+
+#loginModalBody {
+  background: #02131c3a;
+  color: #fffa9f;
+  border: 1px solid #00ffff;
+  box-shadow: 2px 2px 20px #02ffee, inset 2px 2px 10px #02ffd5;
+}
+
+.login-sumbit-btn {
+  border: 1px solid #975aff;
+  box-shadow: 1px 1px 10px #9a7bff, inset 2px 2px 10px #9a7bff;
+  color: #00ffff;
+
+  &:hover {
+    background-color: #975aff;
+    color: #00ffff;
+    font-weight: bold;
+    box-shadow: 1px 1px 10px #9a7bff, inset 2px 2px 10px #9a7bff;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.03);
+  }
+}
+
+.login-close-btn {
+  background-color: #975aff;
+  color: #00ffff;
+  font-weight: bold;
+  border: 1px solid #975aff;
+  box-shadow: 1px 1px 10px #9a7bff, inset 2px 2px 10px #9a7bff;
+  &:hover {
+    border: 1px solid #975aff;
+    color: #00ffff;
+    box-shadow: 1px 1px 10px #9a7bff, inset 2px 2px 10px #9a7bff;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.03);
+  }
+}
+
+.img {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-text {
+  font-family: "Black Ops One", system-ui;
+}
+
+.card-text span {
+  color: hsl(177, 100%, 95%);
+  text-shadow: -1px -1px 2px #01ffff;
+}
